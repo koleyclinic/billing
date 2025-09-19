@@ -1,0 +1,70 @@
+body {
+            font-family: 'Inter', sans-serif;
+        }
+        .invoice-container {
+            font-family: "Century Gothic", Arial, sans-serif;
+        }
+        /* Styles from the provided Google Sheet template */
+        .ritz .waffle a { color: inherit; }
+        .ritz .waffle .s0{background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s5{border-right:1px SOLID transparent;background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s28{border-bottom:1px SOLID #bfbfbf;border-right:1px SOLID #bfbfbf;background-color:#ffffff;text-align:center;font-weight:bold;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:12pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s3{background-color:#ffffff;text-align:left;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s15{border-right:1px SOLID #f2f2f2;background-color:#ffffff;text-align:left;font-weight:bold;color:#ffffff;font-family:"docs-Century Gothic",Arial;font-size:11pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s32{border-bottom:1px SOLID #bfbfbf;background-color:#cfe2f3;text-align:center;font-weight:bold;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:13pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s4{border-bottom:1px SOLID transparent;background-color:#ffffff;text-align:left;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s6{border-bottom:1px SOLID transparent;border-right:1px SOLID transparent;background-color:#1e4e79;text-align:center;color:#2e75b5;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s24{border-bottom:1px SOLID #bfbfbf;border-right:1px SOLID transparent;background-color:#1e4e79;text-align:center;font-weight:bold;color:#ffffff;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s34{background-color:#ffffff;text-align:right;font-weight:bold;color:#000000;font-family:docs-Lato,Arial;font-size:12pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s8{background-color:#ffffff;text-align:left;color:#555555;font-family:docs-Calibri,Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s33{background-color:#ffffff;text-align:center;font-weight:bold;font-style:italic;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:11pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s23{border-bottom:1px SOLID #000000;border-right:1px SOLID transparent;background-color:#1e4e79;text-align:center;font-weight:bold;color:#ffffff;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s31{border-right:1px SOLID #bfbfbf;background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s9{background-color:#ffffff;text-align:left;font-weight:bold;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:11pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s35{background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:12pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s21{border-bottom:1px SOLID transparent;background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s17{background-color:#ffffff;text-align:left;font-weight:bold;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s18{border-bottom:1px SOLID #a5a5a5;background-color:#ffffff;text-align:center;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s2{border-bottom:1px SOLID transparent;background-color:#ffffff;text-align:center;font-weight:bold;color:#1e4e79;font-family:docs-Constantia,Arial;font-size:26pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s19{background-color:#ffffff;text-align:center;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s30{border-bottom:1px SOLID #bfbfbf;border-right:1px SOLID #bfbfbf;background-color:#cfe2f3;text-align:center;font-weight:bold;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:13pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s36{background-color:#ffffff;text-align:left;font-weight:bold;color:#202124;font-family:docs-Lato,Arial;font-size:12pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s1{background-color:#ffffff;text-align:left;font-weight:bold;color:#1e4e79;font-family:docs-Constantia,Arial;font-size:22pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s29{background-color:#ffffff;text-align:left;color:#000000;font-family:docs-Calibri,Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s16{border-bottom:1px SOLID #f2f2f2;border-right:1px SOLID #f2f2f2;background-color:#1e4e79;text-align:center;font-weight:bold;color:#ffffff;font-family:"docs-Century Gothic",Arial;font-size:11pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s13{border-right:1px SOLID #f2f2f2;background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s26{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s27{border-bottom:1px SOLID #bfbfbf;border-right:1px SOLID #bfbfbf;background-color:#ffffff;text-align:center;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:12pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s11{background-color:#ffffff;text-align:center;font-weight:bold;color:#1e4e79;font-family:"docs-Century Gothic",Arial;font-size:11pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s25{border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s7{background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s10{border-bottom:1px SOLID #d9d9d9;background-color:#ffffff;text-align:center;font-weight:bold;color:#3f3f3f;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s14{border-bottom:1px SOLID transparent;border-right:1px SOLID #f2f2f2;background-color:#1e4e79;text-align:center;font-weight:bold;color:#ffffff;font-family:"docs-Century Gothic",Arial;font-size:11pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s20{background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:14pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s12{border-bottom:1px SOLID #f2f2f2;background-color:#ffffff;text-align:left;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s22{border-bottom:1px SOLID transparent;background-color:#ffffff;text-align:left;font-weight:bold;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+        .ritz .waffle .s30-total { background-color: #bdd6ee; border-bottom:1px SOLID #bfbfbf;border-right:1px SOLID #bfbfbf; text-align:center;font-weight:bold;color:#000000;font-family:"docs-Century Gothic",Arial;font-size:13pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0px 3px 0px 3px;}
+
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #invoice-preview, #invoice-preview * {
+                visibility: visible;
+            }
+            #invoice-preview {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+            #form-container, #controls {
+                display: none;
+            }
+        }
+
+        .s14, .s16, .s23, .s24 {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
