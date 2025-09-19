@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koley Clinic Medical Invoice </title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/tailwind.min.css">
+	
+</head>
+<body class="bg-gray-100 p-4 sm:p-6 lg:p-8">
+    <div class="max-w-4xl mx-auto">
+        <div id="form-container" class="bg-white p-8 rounded-lg shadow-lg mb-8">
+		
+            <img src="logo.svg" alt="Clinic Logo" id="clinic-logo" style="width: 60px; height: auto; margin: 0 auto;">
+                                
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Koley Clinic Invoice</h1>
+            
+            <!-- Store base64 logo for PDF -->
+            <script>
+                // Convert logo to base64 when page loads
+                const logoImg = new Image();
+                logoImg.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = this.naturalWidth;
+                    canvas.height = this.naturalHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(this, 0, 0);
+                    window.logoBase64 = canvas.toDataURL('image/png');
+                };
+                logoImg.src = 'logo.svg';
+            </script>
+
+            <fieldset class="border p-4 rounded-md mb-6">
+                <legend class="text-xl font-semibold text-gray-700 px-2">Clinic Details</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="clinicName" class="block text-sm font-medium text-gray-600">Clinic Name</label>
+                        <input type="text" id="clinicName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="Koley Clinic">
+                    </div>
+                    <div>
+                        <label for="clinicAddress" class="block text-sm font-medium text-gray-600">Address</label>
+                        <input type="text" id="clinicAddress" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="Penro, Opposite of Sobuj Sangha, Howrha - 711410">
+                    </div>
+                    <div>
+                        <label for="clinicEmail" class="block text-sm font-medium text-gray-600">Email</label>
+                        <input type="email" id="clinicEmail" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="koleyclinic@gmail.com">
+                    </div>
+                    <div>
+                        <label for="clinicPhone" class="block text-sm font-medium text-gray-600">Phone</label>
+                        <input type="tel" id="clinicPhone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="+919732712686/+917074613584/03214250686">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="border p-4 rounded-md mb-6">
+                <legend class="text-xl font-semibold text-gray-700 px-2">Invoice Details</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="invoiceNumber" class="block text-sm font-medium text-gray-600">Invoice Number</label>
+                        <input type="text" id="invoiceNumber" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="KC1">
+                    </div>
+                    <div>
+                        <label for="invoiceDate" class="block text-sm font-medium text-gray-600">Invoice Date</label>
+                        <input type="date" id="invoiceDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="2023-07-01">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <fieldset class="border p-4 rounded-md">
+                    <legend class="text-xl font-semibold text-gray-700 px-2">Patient Information</legend>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="patientName" class="block text-sm font-medium text-gray-600">Patient Name</label>
+                            <input type="text" id="patientName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Mr. ">
+                        </div>
+                        <div>
+                            <label for="patientAge" class="block text-sm font-medium text-gray-600">Patient Age</label>
+                            <input type="number" id="patientAge" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="">
+                        </div>
+                         <div>
+                            <label for="gender" class="block text-sm font-medium text-gray-600">Gender</label>
+                            <select id="gender" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                <option selected>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mobileNo" class="block text-sm font-medium text-gray-600">Mobile No</label>
+                            <input type="tel" id="mobileNo" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="+91 ">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="border p-4 rounded-md">
+                    <legend class="text-xl font-semibold text-gray-700 px-2">Referring Doctor</legend>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="doctorName" class="block text-sm font-medium text-gray-600">Doctor Name</label>
+                            <input type="text" id="doctorName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Dr. ">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+             <fieldset class="border p-4 rounded-md mt-8">
+                <legend class="text-xl font-semibold text-gray-700 px-2">Services / Particulars</legend>
+                <div id="particulars-container" class="space-y-4">
+                    </div>
+                <button type="button" id="add-particular" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md shadow">
+                    Add Service
+                </button>
+            </fieldset>
+            
+            <div class="mt-6">
+                <label for="totalDiscount" class="block text-sm font-medium text-gray-600">Total Discount (₹)</label>
+                <input type="number" id="totalDiscount" class="mt-1 block w-full max-w-xs rounded-md border-gray-300 shadow-sm" value="0">
+            </div>
+
+        </div>
+
+        <div id="controls" class="flex justify-center space-x-4 mb-8">
+            <button id="preview-btn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                Preview Invoice
+            </button>
+            <button id="print-btn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105" style="display: none;">
+                Print
+            </button>
+            <button id="download-btn" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105" style="display: none;">
+                Download PDF
+            </button>
+        </div>
+
+        <div id="invoice-preview" class="bg-white p-4 sm:p-8 rounded-lg shadow-lg" style="display: none;">
+             </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('invoiceDate').value = new Date().toISOString().split('T')[0];
+            
+            const addParticularRow = (item = {}) => {
+                const container = document.getElementById('particulars-container');
+                const row = document.createElement('div');
+                row.className = 'grid grid-cols-12 gap-2 items-center particular-row';
+                row.innerHTML = `
+                    <div class="col-span-4">
+                        <label class="text-sm font-medium text-gray-600 sr-only">Description</label>
+                        <input type="text" name="description" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="Service Description" value="${item.description || ''}">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="text-sm font-medium text-gray-600 sr-only">Rate</label>
+                        <input type="number" name="rate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="Rate" value="${item.rate || ''}">
+                    </div>
+                   <div class="col-span-2">
+                        <label class="text-sm font-medium text-gray-600 sr-only">Discount</label>
+                        <input type="number" name="discount" 
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" 
+                            placeholder="Discount" 
+                            value="${item.discount || ''}" 
+                            disabled>
+                    </div>
+                    <div class="col-span-2">
+                        <label class="text-sm font-medium text-gray-600 sr-only">Amount</label>
+                        <input type="text" name="amount" class="mt-1 block w-full rounded-md bg-gray-100 border-gray-300 shadow-sm" readonly>
+                    </div>
+                    <div class="col-span-2">
+                        <button type="button" class="remove-particular bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-3 rounded-md shadow">Remove</button>
+                    </div>
+                `;
+    
+                container.appendChild(row);
+
+                const updateAmount = () => {
+                    const rate = parseFloat(row.querySelector('[name="rate"]').value) || 0;
+                    row.querySelector('[name="amount"]').value = rate.toFixed(2);
+                };
+
+                row.querySelector('[name="rate"]').addEventListener('input', updateAmount);
+                row.querySelector('.remove-particular').addEventListener('click', () => row.remove());
+                updateAmount();
+            };
+
+            addParticularRow({ description: 'Consultation Fee', rate: 400 });
+            document.getElementById('add-particular').addEventListener('click', () => addParticularRow());
+
+            document.getElementById('preview-btn').addEventListener('click', function () {
+                const data = {
+                    clinicName: document.getElementById('clinicName').value,
+                    clinicAddress: document.getElementById('clinicAddress').value,
+                    clinicEmail: document.getElementById('clinicEmail').value,
+                    clinicPhone: document.getElementById('clinicPhone').value,
+                    invoiceNumber: document.getElementById('invoiceNumber').value,
+                    invoiceDate: new Date(document.getElementById('invoiceDate').value).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).replace(/ /g, '-'),
+                    patientName: document.getElementById('patientName').value,
+                    patientAge: document.getElementById('patientAge').value,
+                    gender: document.getElementById('gender').value,
+                    mobileNo: document.getElementById('mobileNo').value,
+                    doctorName: document.getElementById('doctorName').value,
+                    totalDiscount: parseFloat(document.getElementById('totalDiscount').value) || 0,
+                    items: []
+                };
+
+                const particularRows = document.querySelectorAll('.particular-row');
+                let subTotal = 0;
+                particularRows.forEach((row, index) => {
+                    const description = row.querySelector('[name="description"]').value;
+                    const rate = parseFloat(row.querySelector('[name="rate"]').value) || 0;
+                    if (description) {
+                        data.items.push({
+                            sr: index + 1,
+                            description,
+                            rate: rate,
+                            amount: rate
+                        });
+                        subTotal += rate;
+                    }
+                });
+                
+                const totalBill = subTotal - data.totalDiscount;
+
+                const invoiceHTML = `
+                <div class="ritz grid-container invoice-container" dir="ltr">
+                    <table class="waffle no-grid" cellspacing="0" cellpadding="0" style="width: 100%; font-family: Arial, sans-serif;">
+                        <tbody>
+                            <tr style="height: 29px">
+                                <td rowspan="2" style="width: 80px; text-align: center; vertical-align: middle;">
+                                    <img src="${window.logoBase64}" alt="Clinic Logo" style="width: 60px; height: auto; margin: 0 auto;">
+                                </td>
+                                <td colspan="4" rowspan="2" style="font-size: 20px; font-weight: bold; text-align:left; vertical-align:middle; padding-left: 15px;">${data.clinicName}</td>
+                                <td colspan="5" rowspan="5" style="text-align:center; font-size: 36px; font-weight: bold; vertical-align: middle; color: #333;">INVOICE</td>
+                            </tr>
+                            <tr style="height: 29px"></tr>
+                            <tr style="height: 21px">
+                                <td colspan="5" style="text-align:center; font-size: 12px; color: #555;">${data.clinicAddress}</td>
+                            </tr>
+                            <tr style="height: 23px">
+                                <td colspan="5" style="text-align:center; font-size: 12px; color: #555;">${data.clinicPhone}</td>
+                            </tr>
+                            <tr style="height: 11px"><td colspan="5"></td></tr>
+                            <tr style="height: 8px"><td style="border-bottom: 2px solid #ccc;" colspan="10"></td></tr>
+                            <tr style="height: 17px"></tr>
+                            <tr style="height: 23px">
+                                <td></td><td style="font-weight: bold;" colspan="2">INVOICE DATE</td><td colspan="2">${data.invoiceDate}</td>
+                                <td></td><td style="font-weight: bold;" colspan="2">INVOICE NUMBER</td><td dir="ltr" colspan="2">${data.invoiceNumber}</td>
+                            </tr>
+                            <tr style="height: 19px"></tr>
+                            <tr style="height: 27px">
+                                <td></td><td style="background: #eee; padding: 5px; font-weight: bold; border-bottom: 1px solid #ddd;" colspan="4">PATIENT INFORMATION</td>
+                                <td></td><td style="background: #eee; padding: 5px; font-weight: bold; border-bottom: 1px solid #ddd;" dir="ltr" colspan="4">REFERRING DOCTOR</td>
+                            </tr>
+                            <tr style="height: 35px">
+                                <td></td><td style="padding-left: 5px;" colspan="2">Patient Name:</td><td dir="ltr" colspan="2">${data.patientName}</td>
+                                <td></td><td dir="ltr" style="padding-left: 5px;" colspan="2">Doctor Name:</td><td dir="ltr" colspan="2">${data.doctorName}</td>
+                            </tr>
+                            <tr style="height: 35px">
+                                <td></td><td style="padding-left: 5px;" colspan="2">Patient Age:</td><td dir="ltr" colspan="2">${data.patientAge}</td>
+                            </tr>
+                            <tr style="height: 35px">
+                                <td></td><td dir="ltr" style="padding-left: 5px;" colspan="2">Gender:</td><td dir="ltr" colspan="2">${data.gender}</td>
+                            </tr>
+                             <tr style="height: 31px">
+                                <td></td><td dir="ltr" style="padding-left: 5px;" colspan="2">Mobile No:</td><td dir="ltr" colspan="2">${data.mobileNo}</td>
+                            </tr>
+                            <tr style="height: 19px"></tr>
+                            <tr style="height: 39px; border: 2px solid #ccc;">
+                                <td></td>
+                                <td style="background: white; color: #333; text-align: center; font-weight: bold; padding: 8px;">SR#</td>
+                                <td colspan="5" style="background: white; color: #333; text-align: center; font-weight: bold; padding: 8px; border: 2px solid #ccc">PARTICULARS</td>
+                                <td colspan="2" style="background: white; color: #333; text-align: center; font-weight: bold; padding: 8px; border: 2px solid #ccc">RATE</td>
+                                <td style="background: white; color: #333; text-align: center; font-weight: bold; padding: 8px; border: 2px solid #ccc">AMOUNT</td>
+                            </tr>
+                            ${data.items.map(item => `
+                            <tr style="height: 32px;  border : 2px solid #eee">
+                                <td></td>
+                                <td style="text-align: center; padding: 8px; ">${item.sr}</td>
+                                <td dir="ltr" colspan="5" style="text-align: center; padding: 8px; border: 2px solid #eee;">${item.description}</td>
+                                <td colspan="2" style="text-align: center; padding: 8px; border: 2px solid #eee;">₹${item.rate.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                                <td style="text-align: center; padding: 8px; border: 2px solid #eee;">₹${item.amount.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            </tr>
+                            `).join('')}
+                            <tr style="height: 39px; border-top: 2px solid #ccc;">
+                                <td colspan="7"></td><td style="text-align: center; font-weight: bold; padding: 5px;" colspan="2">Sub Total</td><td style="text-align: center; padding: 5px;">₹${subTotal.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            </tr>
+                            <tr style="height: 39px">
+                                <td colspan="7"></td><td dir="ltr" style="text-align: center; font-weight: bold; padding: 5px;" colspan="2">Discount</td><td style="text-align: center; padding: 5px;">- ₹${data.totalDiscount.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            </tr>
+                             <tr style="height: 39px; background: #eee; font-weight: bold; font-size: 1.1em;">
+                                <td colspan="7"></td><td style="text-align: center; padding: 8px;" colspan="2">Total</td><td style="text-align: center; padding: 8px;">₹${totalBill.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                `;
+
+                const previewContainer = document.getElementById('invoice-preview');
+                previewContainer.innerHTML = invoiceHTML;
+                previewContainer.style.display = 'block';
+                document.getElementById('print-btn').style.display = 'inline-block';
+                // *** SHOW THE NEW DOWNLOAD BUTTON ***
+                document.getElementById('download-btn').style.display = 'inline-block';
+                
+                previewContainer.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            document.getElementById('print-btn').addEventListener('click', function() {
+                const invoiceNumber = document.getElementById('invoiceNumber').value;
+                const patientName = document.getElementById('patientName').value.replace(/ /g, '-');
+                const originalTitle = document.title;
+                document.title = `${invoiceNumber}-${patientName}`;
+                window.print();
+                setTimeout(() => { document.title = originalTitle; }, 1000);
+            });
+
+            // Event listener for the download button with direct jsPDF implementation
+            document.getElementById('download-btn').addEventListener('click', async function() {
+                const invoicePreview = document.getElementById('invoice-preview');
+                const invoiceNumber = document.getElementById('invoiceNumber').value;
+                const patientName = document.getElementById('patientName').value.replace(/ /g, '-');
+                const filename = `${invoiceNumber}-${patientName}.pdf`;
+
+                // Show loading indication
+                const downloadBtn = document.getElementById('download-btn');
+                const originalText = downloadBtn.textContent;
+                downloadBtn.textContent = 'Generating PDF...';
+                downloadBtn.disabled = true;
+
+                try {
+                    // Make sure the preview is visible
+                    invoicePreview.style.display = 'block';
+
+                    // Create the canvas
+                    const canvas = await html2canvas(invoicePreview, {
+                        scale: 2,
+                        useCORS: true,
+                        logging: false,
+                        allowTaint: true,
+                        backgroundColor: '#ffffff'
+                    });
+
+                    // Calculate dimensions
+                    const imgWidth = 210; // A4 width in mm
+                    const pageHeight = 297; // A4 height in mm
+                    const imgHeight = canvas.height * imgWidth / canvas.width;
+
+                    // Initialize PDF
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF('p', 'mm', 'a4');
+                    
+                    // Add image to PDF
+                    pdf.addImage(
+                        canvas.toDataURL('image/jpeg', 1.0),
+                        'JPEG',
+                        0,
+                        0,
+                        imgWidth,
+                        imgHeight,
+                        undefined,
+                        'FAST'
+                    );
+
+                    // Save the PDF
+                    pdf.save(filename);
+
+                    // Reset button state
+                    downloadBtn.textContent = originalText;
+                    downloadBtn.disabled = false;
+
+                } catch (error) {
+                    console.error('PDF generation failed:', error);
+                    downloadBtn.textContent = originalText;
+                    downloadBtn.disabled = false;
+                    alert('Failed to generate PDF. Please try again.');
+                }
+            });
+        });
+		
+		
+    </script>
+	<script>
+  // This function will run once the entire HTML document is loaded and ready.
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find the element with the id 'current-year' and set its text to the current year.
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  });
+</script>
+
+
+        <footer class="w-full bg-slate-50 border-t border-slate-200 p-4">
+                <div class="flex items-center justify-center space-x-2 text-sm text-slate-600">
+                    <span>Developed with ❤️ by Abhijit</span>
+                    <span class="font-semibold">|</span>
+                    <span>&copy; <span id="current-year"></span></span>
+                </div>
+        </footer>
+</body>
+</html>
